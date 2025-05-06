@@ -2156,7 +2156,7 @@ _check=(bin-video/uvg266.exe libuvg266.a uvg266.pc uvg266.h)
 if [[ $bits = 64bit && $uvg266 = y ]] &&
     do_vcs "$SOURCE_REPO_UVG266"; then
     do_uninstall version.h "${_check[@]}"
-    do_cmakeinstall video -DBUILD_TESTING=OFF
+    do_cmakeinstall video -DBUILD_TESTS=OFF
     do_checkIfExist
 fi
 
